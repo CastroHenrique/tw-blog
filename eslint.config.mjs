@@ -12,6 +12,9 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
+    languageOptions: {
+      parser: require.resolve("@typescript-eslint/parser"),
+    },
     ignores: [
       "node_modules/**",
       ".next/**",
